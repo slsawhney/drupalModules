@@ -1,0 +1,4 @@
+services:
+  ej_market_data.market_data_api_service:
+    class: Drupal\ej_market_data\EJMDApiService
+    arguments: ['@http_client']

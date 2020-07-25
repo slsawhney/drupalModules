@@ -1,0 +1,50 @@
+ej_market_data.adminsettings:
+  path: '/admin/config/ej_market_data/adminsettings'
+  defaults:
+    _form: '\Drupal\ej_market_data\Form\EJMDConfigurationForm'
+    _title: 'Edward Jones Market Data Configuration Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+ej_market_data.symbol_autocomplete:
+  path: '/ej_market_data/symbol_autocomplete'
+  defaults:
+    _controller: '\Drupal\ej_market_data\Controller\MarketDataController::symbolAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+ej_market_data.getAQuote:
+  path: '/market/getaquote/{symbolId}'
+  defaults:
+    _controller: '\Drupal\ej_market_data\Controller\MarketDataController::getAQuote'
+    _title: 'Get a Stock Quote'
+    symbolId: ''
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+ej_market_data.stockWatchList:
+  path: '/market/stockwatchlist'
+  defaults:
+    _form: '\Drupal\ej_market_data\Form\StockWatchListForm'
+    _title: 'View Your Stock Watch List'
+    symbol_id: ''
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+ej_market_data.getMostActiveFunds:
+  path: '/market/getmostactivefunds'
+  defaults:
+    _controller: '\Drupal\ej_market_data\Controller\MarketDataController::getMostActiveFunds'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

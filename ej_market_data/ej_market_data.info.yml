@@ -1,0 +1,9 @@
+name: Edward Jones Market Data
+description: Custom Module to fulfill Market Data functionality
+package: Custom
+configure: ej_market_data.adminsettings
+dependencies:
+  - drupal:node
+  - drupal:block
+type: module
+core: 8.x

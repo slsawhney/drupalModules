@@ -1,0 +1,35 @@
+<div>{{ title }}</div>
+<div id="ptabs" class="ui-tabs">
+    <ul>
+        <li><a href="#market-indexes">{% trans %}Market Indexes{% endtrans %}</a></li>
+        <li><a href="#nyse-most-active">{% trans %}NYSE Most Active{% endtrans %}</a></li>
+        <li><a href="#fixed-income">{% trans %}Fixed Income{% endtrans %}</a></li>
+        <li><a href="#economic-indicators">{% trans %}Economic Indicators{% endtrans %}</a></li>
+    </ul>
+    <div id="market-indexes">
+        <div class="flex content-center flex-wrap">
+            <div class="w-1/3 p-2">
+                <div id="containerDjia"></div>
+                <span>DJIA</span>
+            </div>
+            <div class="w-1/3 p-2">
+                <div id="containerSandP"></div>
+                <span>S&P 500</span>
+            </div>
+            <div class="w-1/3 p-2">
+                <div id="containerNasdaq"></div>
+                <span>NASDAQ</span>
+            </div>
+        </div>
+    </div>
+    <div id="nyse-most-active">
+        <a class="use-ajax invisible hidden" href="/market/getmostactivefunds" id="ajaxLink">Get Most Active Fund</a>
+        <div id="nyse_most_active_container">No data found</div>
+    </div>
+    <div id="fixed-income">
+        {{ fixed_income | raw}}
+    </div>
+    <div id="economic-indicators">
+        {{ economic_indicators | raw}}
+    </div>
+</div>

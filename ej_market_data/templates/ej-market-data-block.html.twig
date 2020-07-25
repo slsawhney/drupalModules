@@ -1,0 +1,16 @@
+<div class="grid grid-cols-4 gap-5 border-b py-5 items-baseline">
+    <span class="text-xl font-bold">{{ title }}</span>
+    {% for market_data in marketData %}
+        {% set arrow_symbol = 'fa-arrow-down' %}
+        {% set arrow_class = 'text-red-500' %}
+        {% if market_data.priceChange > 0 %}
+        {% set arrow_symbol = 'fa-arrow-up' %}
+        {% set arrow_class = 'text-green-500' %}
+        {% endif %}
+        <div class="whitespace-no-wrap">
+            <span class="uppercase font-bold mr-2">{{ market_data.symbol }}</span> <wbr />
+            <span class="mr-2">{{ market_data.lastClosePrice }}</span> <wbr />
+            <span class="{{ arrow_class }}"><i class="fas {{ arrow_symbol }}">&nbsp;</i> ({{ market_data.priceChange }})</span>
+        </div>
+    {% endfor %}
+</div>

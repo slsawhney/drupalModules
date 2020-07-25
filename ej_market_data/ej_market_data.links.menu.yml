@@ -1,0 +1,12 @@
+ej_market_data.adminsettings:
+  title: 'Market Data Web Service Configuration'
+  route_name: ej_market_data.adminsettings
+  description: 'Edward Jones Web Service configuration form where we have to fetch data'
+  parent: system.admin_config_services
+  weight: 99
+  
+ej_market_data.getAQuote:
+  route_name: ej_market_data.getAQuote
+  
+ej_market_data.stockWatchList:
+  route_name: ej_market_data.stockWatchList

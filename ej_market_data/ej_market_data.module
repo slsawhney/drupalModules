@@ -1,0 +1,46 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+function ej_market_data_theme($existing, $type, $theme, $path) {
+  return [
+    'ej_market_data_block' => [
+      'variables' => [
+        'title' => null,
+        'marketData' => null,
+      ],
+    ],
+    'ej_get_a_stock_quote_block' => [
+      'variables' => [
+        'title' => null,
+        'quoteForm' => null,
+      ],
+    ],
+    'ej_get_a_quote' => [
+      'variables' => [
+        'table' => null,
+        'stockDetails' => null,
+        'stockSymbol' => null,
+      ],
+    ],
+    'ej_market_watch_list_block' => [
+      'variables' => [
+        'watchListTable' => null,
+        'title' => null,
+        'editWatchLisLink' => null,
+      ],
+    ],
+    'ej_market_graph_block' => [
+      'variables' => [
+        'title' => null,
+        'chartData' => null,
+        'fixed_income' => null,
+        'economic_indicators' => null
+      ],
+    ]
+  ];
+}

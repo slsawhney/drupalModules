@@ -1,0 +1,10 @@
+{% if(stockDetails.stockName != '') %}
+    <div class="grid grid-cols-2 gap-4">
+        <div>{{ stockDetails.stockName }}<br/>{{ stockDetails.stockDate }}</div>
+        <div><a href="#" id="addToWatchList">{% trans %}Add to Watch List{% endtrans %}</a></div>
+    </div>
+    <div class="py-5">
+        {{ table }}
+    </div>
+    <hr/>
+{% endif %}

@@ -1,0 +1,22 @@
+ej_market_data:
+  version: "8.x-1.x"
+  js:
+    js/ej_market_data.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.cookie
+    - core/drupalSettings
+
+ej_market_graph:
+  version: "8.x-1.x"
+  js:
+    //code.highcharts.com/highcharts.js: {}
+    //code.highcharts.com/modules/data.js: {}
+    #//code.highcharts.com/modules/exporting.js: {}
+    js/ej_market_graph.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.ui.tabs
+    - core/drupal.ajax

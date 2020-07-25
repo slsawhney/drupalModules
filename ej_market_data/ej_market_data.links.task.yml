@@ -1,0 +1,11 @@
+ej_market_data.market-indexes:
+  route_name : ej_market_data.getAQuote
+  title: 'Get a Quote'
+  base_route: ej_market_data.getAQuote
+  weight: 10
+
+ej_market_data.nyse-most-active:
+  route_name: ej_market_data.stockWatchList
+  title: 'View Your Stock Watch List'
+  base_route: ej_market_data.getAQuote
+  weight: 20

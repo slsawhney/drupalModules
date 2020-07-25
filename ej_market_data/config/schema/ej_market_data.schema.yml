@@ -1,0 +1,10 @@
+block.settings.ej_market_graph_block:
+  type: block_settings
+  label: 'Market Graph block'
+  mapping:
+    fixed_income:
+      type: text
+      label: 'Fixed Income'
+    economic_indicators:
+      type: text
+      label: 'Economic Indicators'
